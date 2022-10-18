@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * print_bnr - prints decimal in binary
- * @arguments: input string
- * @buf: buffer pointer
+ * @arguments: input string.
+ * @buf: buffer pointer.
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
