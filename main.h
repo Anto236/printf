@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-
+#include <stddef.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -8,16 +8,17 @@
 /**
  * struct print - struct for printer functions
  * @type_arg: identifier
- * @f: pointer to a pointer function
+ * @f: pointer to a printer functions
  *
  * Description: struct that stores pointers to a
- * pointer function
+ * printer functions
  */
 typedef struct print
 {
 	char *type_arg;
 	int (*f)(va_list, char *, unsigned int);
-} print_t;
+}print_t;
+
 int _printf(const char *format, ...);
 int print_prg(va_list __attribute__((unused)), char *, unsigned int);
 int print_chr(va_list arguments, char *buf, unsigned int ibuf);
@@ -56,4 +57,5 @@ char *fill_oct_array(char *bnr, char *oct);
 char *fill_long_oct_array(char *bnr, char *oct);
 char *fill_short_oct_array(char *bnr, char *oct);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
-#endiif
+
+#endif
